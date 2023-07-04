@@ -1,0 +1,27 @@
+function groupByField(arr, field) {
+  const groupedObj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    const obj = arr[i];
+    const value = obj[field];
+
+    if (groupedObj[value]) {
+      groupedObj[value].push(obj);
+    } else {
+      groupedObj[value] = [obj];
+    }
+  }
+
+  return groupedObj;
+}
+
+// Пример использования функции
+const array = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 30 },
+  { name: "Alice", age: 35 },
+  { name: "Bob", age: 40 }
+];
+
+const result = groupByField(array, "name");
+console.log(result);
