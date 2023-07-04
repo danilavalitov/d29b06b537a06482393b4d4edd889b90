@@ -1,0 +1,17 @@
+function sumNumbers(a, b, c, d, e) {
+  let sum = 0;
+  const argumentsArray = [a, b, c, d, e];
+
+  for (let i = 0; i < argumentsArray.length; i++) {
+    if (typeof argumentsArray[i] === "number") {
+      sum += argumentsArray[i];
+    }
+  }
+
+  return sum;
+}
+
+// Пример использования функции
+console.log(sumNumbers(1, 2, 3, 4, 5)); // Вывод: 15
+console.log(sumNumbers(10, "20", 30, "40", 50)); // Вывод: 90 (строковые значения игнорируются)
+console.log(sumNumbers(1, 2, "three", 4, 5)); // Вывод: 12 ("three" игнорируется)
