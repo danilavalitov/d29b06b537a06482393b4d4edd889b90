@@ -1,0 +1,20 @@
+function countFromArr(arr) {
+  const countObj = {};
+
+  for (let i = 0; i < arr.length; i++) {
+    const element = arr[i];
+
+    if (countObj[element]) {
+      countObj[element]++;
+    } else {
+      countObj[element] = 1;
+    }
+  }
+
+  return countObj;
+}
+
+// Пример использования функции
+const array = ["apple", "banana", "orange", "apple", "banana", "apple"];
+const result = countFromArr(array);
+console.log(result);
